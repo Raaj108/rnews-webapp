@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,6 +18,28 @@ code {
 
 .container {
   padding: 10px 0;
+}
+
+.badge {
+  margin: 0 5px;
+  padding: 5px !important;
+  cursor: pointer;
+}
+
+.badge.active {
+  background-color: #007bff;
+}
+
+span#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .flex-container {

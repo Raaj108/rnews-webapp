@@ -1,6 +1,6 @@
 import React from 'react';
-import Headlines from './components/Headlines';
-import ArticleDetails from './components/ArticleDetails';
+import Headlines from './components/news/Headlines';
+import SearchResult from './components/search/SearchResult';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
@@ -12,7 +12,7 @@ const App = () => {
         <Header></Header>
         <div className="container">
           <Route exact path="/" component={Headlines}></Route>
-          <Route path="/article/:id" component={ArticleDetails}></Route>
+          <Route exact path="/search/:q" component={SearchResult}></Route>
         </div>
         <Footer></Footer>
       </div>

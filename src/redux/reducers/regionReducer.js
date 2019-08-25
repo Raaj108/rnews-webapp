@@ -1,10 +1,18 @@
 const initState = {  
-  counrty: ""
+  selectedRegion: "in"
 };
 
 const regionReducer = (state = initState, action) => {
-  console.log(state);
-  return state;
+  switch(action.type){
+    case "SET_REGION": 
+      return{
+        ...state,
+        selectedRegion: action.selectedRegion
+      }
+    default:
+      return state;
+  }
+  
 }
 
 export default regionReducer;
